@@ -4,7 +4,6 @@ import CartContext from "../../context/cart-context";
 import classes from "./Modal.module.css";
 import CartItem from "./CartItem";
 import Button from "./Button";
-// import _ from "lodash"
 
 let styles = `${classes.modal}`
 
@@ -51,9 +50,10 @@ const ModalContent = (props) => {
   }
 
   const placeOrderHandler = () => {
-    console.log("Ordering...")
+    console.log("Ordering those articles below...")
+    console.log(itemWithQuantityIterable);
     props.onCloseModal();
-    ctx.items = [];
+    ctx.setItems([]);
   }
 
   const changeListHandler = (item, action) => {
@@ -75,7 +75,6 @@ const ModalContent = (props) => {
       }
     }
 
-    console.log(itemWithQuantityIterable);
     const updatedItemsArray = []
 
     itemWithQuantityIterable.forEach(obj => {
@@ -85,7 +84,6 @@ const ModalContent = (props) => {
         x++
       }
     })
-
     ctx.setItems(updatedItemsArray)
   }
 
@@ -113,14 +111,11 @@ const ModalContent = (props) => {
 }
 
 
-
 const Modal = (props) => {
   return (
     <>
       {ReactDom.createPortal(<Backdrop onClick={props.closeModalHandler} onCloseModal={props.onCloseModal} />, document.getElementById("backdrop-container"))}
       {ReactDom.createPortal(<ModalContent onCloseModal={props.onCloseModal} />, document.getElementById("modal-content"))}
-      {/* {ReactDom.createPortal(<Backdrop onClick={props.closeModalHandler} onCloseModal={props.onCloseModal} />, document.getElementById("backdrop-container"))}
-      {ReactDom.createPortal(<ModalContent onClick={props.closeModalHandler} onCloseModal={props.onCloseModal} />, document.getElementById("modal-content"))} */}
     </>
   );
 }

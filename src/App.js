@@ -10,12 +10,6 @@ function App() {
   const [totalAmount, setTotalAmount] = useState(0);
   const [animate, setAnimate] = useState(false)
 
-  useEffect(() => {
-    // console.log(totalAmount);
-    // console.log(items);
-
-  }, [items])
-
   const createNewItems = (i, q) => {
     // ! THIS IS A HELPER FUNCTION TO CORRECTLH UPDATE THE NUMBER OF ITEM IN CART
     const newItemsArray = [];
@@ -37,10 +31,6 @@ function App() {
     const updatedItems = items.filter(el => el.id == !item.id)
     setItems(updatedItems)
   }
-
-  // const bumpCartEffect = () => {
-  //   setAnimate(true)
-  // }
 
   return (
     <CartContext.Provider value={{

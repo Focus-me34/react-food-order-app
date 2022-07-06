@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext } from "react";
 import Button from "../UI/Button";
 import CartIcon from "../UI/CartIcon";
 import Modal from "../UI/Modal";

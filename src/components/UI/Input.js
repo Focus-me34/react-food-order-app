@@ -13,7 +13,10 @@ const Input = (props) => {
       ctx.setAnimate(false)
     }, 300);
 
-    // return clearInterval(intervalRef)
+    // return () =>  {
+    //   console.log("INTERRUPTION");
+    //   clearInterval(intervalRef)
+    // }
   }, [ctx.animate])
 
   const onChangeHandler = (e) => {
