@@ -12,7 +12,8 @@ const NavCart = () => {
   const btnClasses = `${classes.button} ${ctx.animate === true ? classes.bump : ''}`;
 
   const toggleCartModal = () => {
-    showModal ? setShowModal(false) : setShowModal(true);
+    setShowModal(prevState => !prevState);
+    // showModal ? setShowModal(false) : setShowModal(true);
   }
 
   const onCloseModal = () => {

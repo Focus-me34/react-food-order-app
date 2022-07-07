@@ -1,12 +1,14 @@
 import Card from "../UI/Card";
 import classes from "./Home.module.css";
+import mealsImg from "../../assets/meals.jpeg"
 
 
 const Home = (props) => {
   return (
     <div className={classes["home-container"]}>
       <div className={classes["main-image"]}>
-        <img src="https://raw.githubusercontent.com/academind/react-complete-guide-code/11-practice-food-order-app/extra-files/meals.jpg" alt="Table full of meals" />
+        {/* <img src="https://raw.githubusercontent.com/academind/react-complete-guide-code/11-practice-food-order-app/extra-files/meals.jpg" alt="Table full of meals" /> */}
+        <img src={mealsImg} alt="Table full of meals" />
       </div>
 
       <div className={classes["inner-container"]}>

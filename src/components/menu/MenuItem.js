@@ -14,7 +14,7 @@ const MenuItem = () => {
             <div>
               <h3>{meal.name}</h3>
               <p className={classes.description}>{meal.description}</p>
-              <p className={classes.price}>{meal.price}$</p>
+              <p className={classes.price}>$ {meal.price.toFixed(2)}</p>
             </div>
             <Input meals={meals} meal={meal}></Input>
           </div>)
@@ -49,5 +49,11 @@ const DUMMY_MEALS = [
     name: 'Green Bowl',
     description: 'Healthy...and green...',
     price: 18.99,
+  },
+  {
+    id: '5',
+    name: 'Couscous',
+    description: 'Deliciously morrocan',
+    price: 19.50,
   },
 ];

@@ -95,18 +95,18 @@ const ModalContent = (props) => {
           itemWithQuantityIterable.map((item, i) => {
             return (<CartItem item={item} onChangeList={changeListHandler} itemName={item.meal.name} itemPrice={item.meal.price} itemQuantity={item.quantity} key={i}></CartItem>)
           })}
-        {ctx.items.length !== 0 &&
-          <div className={classes.total}>
-            <h2>Total Amount</h2>
-            <div>
-              <p className={classes["total-price"]}>$ {ctx.totalAmount.toFixed(2)}</p>
-              <div className={classes.actions}>
-                <Button className={classes["button--alt"]} onClick={closeModalHandler}>Close</Button>
-                <Button className={classes.button} onClick={placeOrderHandler}>Order</Button>
-              </div>
-            </div>
-          </div>}
       </div>
+      {ctx.items.length !== 0 &&
+        <div className={classes.total}>
+          <h2>Total Amount</h2>
+          <div>
+            <p className={classes["total-price"]}>$ {ctx.totalAmount.toFixed(2)}</p>
+            <div className={classes.actions}>
+              <Button className={classes["button--alt"]} onClick={closeModalHandler}>Close</Button>
+              <Button className={classes.button} onClick={placeOrderHandler}>Order</Button>
+            </div>
+          </div>
+        </div>}
     </ div >)
 }
 
