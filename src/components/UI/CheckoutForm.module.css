@@ -1,0 +1,55 @@
+.form {
+  height: 17rem;
+  overflow: auto;
+  padding: 0 1.2rem;
+  margin: 0 auto;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control label {
+  width: fit-content;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.form-control input,
+.form-control select {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 20rem;
+  max-width: 100%;
+}
+
+.invalid input {
+  border: 1px solid #b40e0e;
+  background-color: #fddddd;
+}
+
+.invalid input:focus {
+  border-color: #ff8800;
+  background-color: #fbe8d2;
+}
+
+.form-control p {
+  margin: 0.5rem 0 0;
+}
+
+.form-control:last-of-type p {
+  margin-bottom: 2rem;
+}
+
+.error-text {
+  color: #b40e0e;
+}
+
+.invisible {
+  opacity: 0;
+}
